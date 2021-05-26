@@ -1,0 +1,16 @@
+python -m venv venv
+venv\Scripts\activate.bat
+
+python -m pip install --upgrade pip
+pip install ipykernel
+ipython kernel install --user --name=ai_trading_p4
+
+
+jupyter kernelspec list
+jupyter kernelspec uninstall ai_trading_py3.6.3
+
+rmdir venv /s
+
+"navigate to the root= dir"
+tar -czf home/workspace/data.tar.gz data
+split -b 200m data.tar.gz data.tar.gz.part
